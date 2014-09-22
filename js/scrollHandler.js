@@ -53,16 +53,16 @@
 
      slide0.style.backgroundPosition = "50% " + (wsh - 231 + 2 * Y) + 'px'; //背景的基点是bottom center，因此得用屏幕高度
 
-      var wInnerW2 = window.innerWidth;
-     if(wInnerW2 != wInnerW){
-     introSH = intro.scrollHeight,
-     sl0SH = slide0.scrollHeight,
-     sl2SH = slide2.scrollHeight,
-     sl3SH = slide3.scrollHeight,
-     sl4SH = slide4.scrollHeight,
-     sl5SH = slide5.scrollHeight;
+     var wInnerW2 = window.innerWidth;
+     if (wInnerW2 != wInnerW) {
+         introSH = intro.scrollHeight,
+         sl0SH = slide0.scrollHeight,
+         sl2SH = slide2.scrollHeight,
+         sl3SH = slide3.scrollHeight,
+         sl4SH = slide4.scrollHeight,
+         sl5SH = slide5.scrollHeight;
      }
-     
+
      /*navbar */
      if (scrollTop > 10) {
          deP[0].classList.add("scrollDePadding");
@@ -79,13 +79,12 @@
      }
      if (scrollTop > 50) {
          zoom.classList.add("scrollZoom");
-     } 
-     else {
+     } else {
          zoom.classList.remove("scrollZoom");
      }
 
      /*slide0 scroll to center*/
-     if (scrollTop > introSH - 10 && scrollTop < 200+sl0SH + introSH) {
+     if (scrollTop > introSH - 10 && scrollTop < 200 + sl0SH + introSH) {
          aboutMe.classList.add("scrollOpacity");
          aboutMe.classList.add("scrollToCenter")
      } else {
@@ -99,10 +98,11 @@
          about.classList.add("active");
      } else if (scrollTop >= 90 + introSH + sl0SH && scrollTop < 90 + introSH + sl0SH + sl3SH) {
          active.classList.remove("active");
-         ski.classList.add("active");
+         pj.classList.add("active");
+
      } else if (scrollTop >= 90 + introSH + sl0SH + sl3SH && scrollTop < 90 + introSH + sl0SH + sl2SH + sl3SH) {
          active.classList.remove("active");
-         pj.classList.add("active");
+         ski.classList.add("active");
      } else {
          active.classList.remove("active");
          more.classList.add("active");
